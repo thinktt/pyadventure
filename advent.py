@@ -43,7 +43,7 @@ def outside_cave():
     while True:
         choice = input()    
         if choice == "1":
-            print("You killed the bear! You murderer! You lose.")
+            print("You fought the bear and the bear won. You lose!")
             return end
         elif choice == "2":
             return cave
