@@ -50,10 +50,20 @@ def outside_cave():
         else:
             print("I don't know that option")
 
-
+hunger = 0
 def you_sleep():
+    global hunger
+    hunger = hunger + 1
     print()
     print("You awaken and it is morning. It seems like a good time to go hunting.")
+    if hunger == 2: 
+        print("You are starting to feel hungry")
+    elif hunger == 3:
+        print("You are reaaaaally hungry!")
+    elif hunger == 4: 
+        print("You can barely stand you are so hungry, you need food now!")
+    elif hunger == 5:
+        return die_of_hunger
     print("1. Go hunting")
     print("2. Sleep some more")
 
@@ -68,6 +78,11 @@ def you_sleep():
         else:
             print("I don't know that option")
 
+
+def die_of_hunger():
+    print()
+    print("You died in your sleep of hunger. You lose.")
+    return end 
 
 def end(): 
     print("Thanks for playing Little Cave Adventure!")
